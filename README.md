@@ -18,13 +18,22 @@ Quickstart
    .\.venv\Scripts\Activate.ps1   # PowerShell
    .\.venv\Scripts\activate.bat   # cmd.exe
 
-2. Install dependencies:
+2. Install the package and dependencies:
 
-   pip install -r C:\Users\Administrator\amr_simulator\requirements.txt
+   Option A (development):
+   pip install -e .
+
+   Option B (minimal):
+   pip install -r requirements.txt
 
 3. Run the demo:
 
-   python C:\Users\Administrator\amr_simulator\run.py
+   python run.py
+
+Testing
+Run the unit tests to verify everything is working:
+
+   pytest
 
 Notes
 - The demo opens an interactive matplotlib window showing the current occupancy probability map, the true map overlay, robot pose, goal, and current planned path.
@@ -36,14 +45,29 @@ Project layout
 - planner.py — AStarPlanner for grid planning
 - avoidance.py — ObstacleAvoider (reactive safety checks)
 - run.py — Demo runner and matplotlib visualization
-- requirements.txt — required Python packages
+- tests/ — Unit test suite for all modules
+- setup.py — Package installation configuration
+- requirements.txt — Required Python packages
+- CONTRIBUTING.md — Guidelines for contributing to the project
+- CHANGELOG.md — Version history and roadmap
 
 Limitations and next steps
 - This is a proof-of-concept. It does not implement full SLAM (no pose-uncertainty handling or loop closure).
 - Dynamic obstacles are handled reactively by stopping and replanning. For robust dynamic handling, consider adding a moving-object tracker and temporally-weighted occupancy or velocity estimates.
 
 Contributing
-- Improvements welcome: better sensor models, particle-filter-based SLAM (FastSLAM), scan-matching (ICP), or porting to ROS for real-robot experiments.
+Improvements welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
+- Setting up a development environment
+- Running tests
+- Coding standards
+- Submitting pull requests
+
+Areas for contribution include:
+- Better sensor models
+- Particle-filter-based SLAM (FastSLAM)
+- Scan-matching algorithms (ICP)
+- ROS integration for real-robot experiments
+- Performance optimization
 
 License
 This project is released under the MIT License. See LICENSE for details.
