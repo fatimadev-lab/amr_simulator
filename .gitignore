@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
+
+# logs
+*.log
+
+# pytest
+.cache/
+.pytest_cache/
+
+# environment files
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS generated files
+Thumbs.db
+
+# matplotlib cache (if any)
+.mpl_cache/
