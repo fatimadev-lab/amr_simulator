@@ -72,5 +72,4 @@ Areas for contribution include:
 License
 This project is released under the MIT License. See LICENSE for details.
 
-Acknowledgements
-- Created with assistance from an AI assistant (Copilot CLI runtime in VS Code).
+
